@@ -1,0 +1,157 @@
+/* Background */
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+
+  background-image: linear-gradient(
+    to top right,
+    #262c56 50%,
+    #31386a,
+    #282e59
+  );
+  background-attachment: fixed;
+}
+
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap");
+@font-face {
+  font-family: "nevis Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("nevis Bold"), url("../Fonts/nevis.woff") format("woff");
+}
+
+* {
+  font-family: "nevis Bold", "Roboto", "Arial";
+}
+
+/* Scrollbar */
+/* Firefox */
+html {
+  scrollbar-color: #9e07f7 #1e2240;
+  scrollbar-width: thin;
+}
+
+/* Chromium */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 2px;
+  transition: 0.25s;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e2240;
+  transition: 0.25s;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #8a02f5, #e51aff);
+  border-radius: 2px;
+  transition: 0.25s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #6f00c5, #b213c7);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+/* Div Styles */
+.bordered-div {
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #353768;
+
+  background-image: linear-gradient(to right bottom, #31386a, #252d56);
+  color: white;
+
+  transition: 0.25s;
+}
+
+.bordered-div-movable:hover {
+  transform: scale(0.85);
+  border-color: #353768;
+
+  transition: 0.25s;
+}
+
+.important-bordered-div {
+  background-image: linear-gradient(to right bottom, #8a02f5, #e51aff);
+  -webkit-box-shadow: -3px 8px 20px 1px #b107fc;
+  -moz-box-shadow: -3px 8px 20px 1px #b107fc;
+  box-shadow: -3px 8px 20px 1px #b107fc;
+
+  border-width: 0px;
+  border-style: none;
+}
+
+.bordered-div-purple {
+  background: #1e2240;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+
+  color: white;
+  border-radius: 10px;
+}
+
+.bordered-div-orange {
+  background-image: linear-gradient(to right, #fa729d, #ff984f);
+  color: white;
+}
+
+.app-title {
+  background-image: linear-gradient(to right, #fa729d, #ff984f);
+  -webkit-box-shadow: -3px 8px 20px -6px #f47e77;
+  -moz-box-shadow: -3px 8px 20px -6px #f47e77;
+  box-shadow: -3px 8px 20px -6px #f47e77;
+
+  color: white;
+  border-radius: 10px;
+  font-size: 27px;
+
+  text-align: center;
+
+  padding-top: 30px;
+  padding-bottom: 35px;
+  height: 25px;
+  width: 170px;
+}
+
+/* Buttons */
+.primary-btn {
+  display: flex;
+  align-items: center;
+
+  background-image: linear-gradient(to right, #00d0ff, #0074ff);
+  color: white;
+
+  outline: none;
+  border: none;
+
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 15px;
+
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.primary-btn:focus,
+.primary-btn:hover {
+  transform: scale(0.9);
+}
+
+.primary-btn p {
+  margin: 0px;
+  margin-right: 20px;
+}
+
+.ico-btn {
+  transition: 0.25s;
+}
+
+.ico-btn:focus {
+  transform: scale(0.85);
+}
