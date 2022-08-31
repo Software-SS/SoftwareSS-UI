@@ -148,10 +148,94 @@ html {
   margin-right: 20px;
 }
 
+/* Icon Button */
+
 .ico-btn {
   transition: 0.25s;
 }
 
-.ico-btn:focus {
+.ico-btn:hover {
   transform: scale(0.85);
+}
+
+/* Footer */
+/* Footer */
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  background: #1e2240;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  color: white;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.footer img.logo {
+  font-size: 25px;
+  font-weight: bold;
+
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-text {
+  padding-left: 20px;
+}
+
+.footer-text h1 {
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.owner-statement {
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.credits {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 0px;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: row;
+}
+
+.copyright p {
+  padding-right: 30px;
+  margin-top: 0px;
+}
+
+.footer .social-media-logos img {
+  margin-right: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.social-media-logos img {
+  transition: 0.5s;
+}
+
+/* .social-media-logos img:hover {
+  background: linear-gradient(145deg, #039ba5, #03b8c4);
+  box-shadow: 3px 3px 6px #03a9b3, -3px -3px 6px #03afbb;
+  transition: 0.5s;
+} */
+
+@media screen and (max-width: 630px) {
+  .footer .logo {
+    width: 20% !important;
+    height: fit-content;
+  }
+  .copyright {
+    flex-direction: column;
+  }
 }
