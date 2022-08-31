@@ -205,9 +205,21 @@ purple-text {
 }
 
 .credits {
-  margin-top: 0px;
+  margin-top: 5px;
   margin-bottom: 5px;
   padding: 0px;
+
+  color: white;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.credits:hover {
+  background-image: linear-gradient(to right, #8a02f5, #e51aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .copyright {
