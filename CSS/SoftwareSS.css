@@ -148,8 +148,16 @@ html {
   margin-right: 20px;
 }
 
-/* Icon Button */
+/* Text Styles */
+purple-text {
+  background-image: linear-gradient(to right, #8a02f5, #e51aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
 
+/* Icon Button */
 .ico-btn {
   transition: 0.25s;
 }
@@ -158,7 +166,6 @@ html {
   transform: scale(0.85);
 }
 
-/* Footer */
 /* Footer */
 .footer {
   left: 0;
@@ -224,11 +231,88 @@ html {
   transition: 0.5s;
 }
 
-/* .social-media-logos img:hover {
-  background: linear-gradient(145deg, #039ba5, #03b8c4);
-  box-shadow: 3px 3px 6px #03a9b3, -3px -3px 6px #03afbb;
-  transition: 0.5s;
-} */
+/* Header */
+.header {
+  -moz-box-shadow: 6px 6px 6px -6px black;
+  -webkit-box-shadow: 6px 6px 6px -6px black;
+  box-shadow: 6px 6px 6px -6px black;
+  color: white;
+
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+
+  position: fixed;
+  width: 100%;
+
+  border-radius: 0px !important;
+}
+
+.menubar-holder,
+.profile-holder {
+  float: left;
+  margin: 0px;
+  width: 20%;
+
+  display: flex;
+  align-items: center;
+}
+
+.menubar-holder {
+  width: 80%;
+}
+
+.menubar-holder i {
+  font-size: 25px;
+  margin-top: 2px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  cursor: pointer;
+}
+
+.menubar-holder .softwaress-logo-holder {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+  color: white;
+
+  margin-left: 10px;
+}
+
+.menubar-holder .softwaress-logo-holder p {
+  font-weight: 900;
+  font-size: 18px;
+  margin: 0px;
+  margin-left: 10px;
+}
+
+.menubar-holder .header-link {
+  text-decoration: none;
+  color: white;
+
+  margin-left: 20px;
+  transition: 0.25s;
+}
+
+.menubar-holder .header-link:hover {
+  background-image: linear-gradient(to right, #8a02f5, #e51aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.profile-holder {
+  justify-content: flex-end;
+}
+
+.profile-holder img {
+  border-radius: 100px;
+  margin-right: 20px;
+}
 
 @media screen and (max-width: 630px) {
   .footer .logo {
@@ -237,5 +321,12 @@ html {
   }
   .copyright {
     flex-direction: column;
+  }
+
+  .softwaress-logo-holder p {
+    display: none;
+  }
+  .menubar-holder .header-link {
+    margin-left: 15px;
   }
 }
