@@ -4,12 +4,7 @@ html {
   padding: 0px;
   margin: 0px;
 
-  background-image: linear-gradient(
-    to top right,
-    #262c56 50%,
-    #31386a,
-    #282e59
-  );
+  background: linear-gradient(to top right, #262c56 50%, #31386a, #282e59);
   background-attachment: fixed;
 }
 
@@ -60,7 +55,7 @@ html {
   border-style: solid;
   border-color: #353768;
 
-  background-image: linear-gradient(to right bottom, #31386a, #252d56);
+  background: linear-gradient(to right bottom, #31386a, #252d56);
   color: white;
 
   transition: 0.25s;
@@ -74,7 +69,7 @@ html {
 }
 
 .important-bordered-div {
-  background-image: linear-gradient(to right bottom, #8a02f5, #e51aff);
+  background: linear-gradient(to right bottom, #8a02f5, #e51aff);
   -webkit-box-shadow: -3px 8px 20px 1px #b107fc;
   -moz-box-shadow: -3px 8px 20px 1px #b107fc;
   box-shadow: -3px 8px 20px 1px #b107fc;
@@ -93,12 +88,12 @@ html {
 }
 
 .bordered-div-orange {
-  background-image: linear-gradient(to right, #fa729d, #ff984f);
+  background: linear-gradient(to right, #fa729d, #ff984f);
   color: white;
 }
 
 .app-title {
-  background-image: linear-gradient(to right, #fa729d, #ff984f);
+  background: linear-gradient(to right, #fa729d, #ff984f);
   -webkit-box-shadow: -3px 8px 20px -6px #f47e77;
   -moz-box-shadow: -3px 8px 20px -6px #f47e77;
   box-shadow: -3px 8px 20px -6px #f47e77;
@@ -322,6 +317,7 @@ purple-text {
   margin-right: 20px;
 }
 
+/* Responsiveness */
 @media screen and (max-width: 630px) {
   .footer .logo {
     width: 20% !important;
@@ -336,5 +332,54 @@ purple-text {
   }
   .menubar-holder .header-link {
     margin-left: 15px;
+  }
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .app-title {
+    background: linear-gradient(to right, #ff96b7, #ffb580);
+    color: black;
+  }
+
+  .bordered-div {
+    background: linear-gradient(to right bottom, #dde2f8, #cfcfcf);
+    -webkit-box-shadow: -3px 8px 20px 1px #cfcfcf;
+    -moz-box-shadow: -3px 8px 20px 1px #cfcfcf;
+    box-shadow: -3px 8px 20px 1px #cfcfcf;
+
+    border-style: hidden;
+    color: black;
+  }
+
+  .menubar-holder .header-link,
+  .menubar-holder .softwaress-logo-holder p {
+    color: black;
+  }
+
+  .bordered-div-purple {
+    background: linear-gradient(to right bottom, #999, #636363);
+    color: black;
+  }
+
+  .important-bordered-div {
+    background: linear-gradient(to right bottom, #d196ff, #9d40a9);
+    color: black;
+  }
+
+  .bordered-div-orange {
+    background: linear-gradient(to right, #ff96b7, #ffb580);
+    color: black;
+  }
+
+  .footer {
+    background: linear-gradient(to right bottom, #dde2f8, #cfcfcf);
+    color: black;
+    box-shadow: 0 8px 32px 0 #cfcfcf;
   }
 }
