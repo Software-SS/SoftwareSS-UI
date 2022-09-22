@@ -1,10 +1,55 @@
+/* CSS Variables */
+:root {
+  --background-color-1: #262c56;
+  --background-color-2: #31386a;
+  --background-color-3: #282e59;
+  --scrollbar-backgroundcolor: #1e2240;
+  --scrollbar-color-0: #9e07f7;
+  --scrollbar-color-1: #8a02f5;
+  --scrollbar-color-2: #e51aff;
+  --scrollbar-color-hover-1: #6f00c5;
+  --scrollbar-color-hover-2: #b213c7;
+
+  --text-color: white;
+  --shadow: black;
+
+  --bordered-div-color-border: #353768;
+  --bordered-div-color-1: #31386a;
+  --bordered-div-color-2: #252d56;
+
+  --important-div-color-border: #b107fc;
+  --important-div-color-1: #8a02f5;
+  --important-div-color-2: #e51aff;
+
+  --purple-div-background: #1e2240;
+  --purple-div-background2: #1e2240;
+  --purple-div-border: #1f26875e;
+
+  --orange-div-border: #f47e77;
+  --orange-div-color-1: #fa729d;
+  --orange-div-color-2: #ff984f;
+
+  --primary-button-color-1: #00d0ff;
+  --primary-button-color-2: #0074ff;
+
+  --footer-background-1: #1e2240;
+  --footer-background-2: #1e2240;
+}
+
+/* Default Color */
+/* Main */
 /* Background */
 body,
 html {
   padding: 0px;
   margin: 0px;
 
-  background: linear-gradient(to top right, #262c56 50%, #31386a, #282e59);
+  background: linear-gradient(
+    to top right,
+    var(--background-color-1) 50%,
+    var(--background-color-2),
+    var(--background-color-3)
+  );
   background-attachment: fixed;
 }
 
@@ -24,7 +69,7 @@ html {
 /* Scrollbar */
 /* Firefox */
 html {
-  scrollbar-color: #9e07f7 #1e2240;
+  scrollbar-color: var(--scrollbar-color-1) var(--scrollbar-backgroundcolor);
   scrollbar-width: thin;
 }
 
@@ -35,16 +80,24 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e2240;
+  background: var(--scrollbar-backgroundcolor);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #8a02f5, #e51aff);
+  background: linear-gradient(
+    to bottom,
+    var(--scrollbar-color-1),
+    var(--scrollbar-color-2)
+  );
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #6f00c5, #b213c7);
+  background: linear-gradient(
+    to bottom,
+    var(--scrollbar-color-hover-1),
+    var(--scrollbar-color-hover-2)
+  );
   cursor: pointer;
 }
 
@@ -53,52 +106,72 @@ html {
   border-radius: 10px;
   border-width: 2px;
   border-style: solid;
-  border-color: #353768;
+  border-color: var(--bordered-div-color-border);
 
-  background: linear-gradient(to right bottom, #31386a, #252d56);
-  color: white;
+  background: linear-gradient(
+    to right bottom,
+    var(--bordered-div-color-1),
+    var(--bordered-div-color-2)
+  );
+  color: var(--text-color);
 
   transition: 0.25s;
 }
 
 .bordered-div-movable:hover {
   transform: scale(0.85);
-  border-color: #353768;
+  border-color: var(--bordered-div-color-border);
 
   transition: 0.25s;
 }
 
 .important-bordered-div {
-  background: linear-gradient(to right bottom, #8a02f5, #e51aff);
-  -webkit-box-shadow: -3px 8px 20px 1px #b107fc;
-  -moz-box-shadow: -3px 8px 20px 1px #b107fc;
-  box-shadow: -3px 8px 20px 1px #b107fc;
+  background: linear-gradient(
+    to right bottom,
+    var(--important-div-color-1),
+    var(--important-div-color-2)
+  );
+  -webkit-box-shadow: -3px 8px 20px 1px var(--important-div-color-border);
+  -moz-box-shadow: -3px 8px 20px 1px var(--important-div-color-border);
+  box-shadow: -3px 8px 20px 1px var(--important-div-color-border);
 
   border-width: 0px;
   border-style: none;
 }
 
 .bordered-div-purple {
-  background: #1e2240;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: linear-gradient(
+    to right bottom,
+    var(--purple-div-background),
+    var(--purple-div-background2)
+  );
+  box-shadow: 0 8px 32px 0 var(--purple-div-background);
   backdrop-filter: blur(4px);
 
-  color: white;
+  color: var(--text-color);
   border-radius: 10px;
 }
 
 .bordered-div-orange {
-  background: linear-gradient(to right, #fa729d, #ff984f);
-  color: white;
+  background: linear-gradient(
+    to right,
+    var(--orange-div-color-1),
+    var(--orange-div-color-2)
+  );
+  color: var(--text-color);
 }
 
 .app-title {
-  background: linear-gradient(to right, #fa729d, #ff984f);
-  -webkit-box-shadow: -3px 8px 20px -6px #f47e77;
-  -moz-box-shadow: -3px 8px 20px -6px #f47e77;
-  box-shadow: -3px 8px 20px -6px #f47e77;
+  background: linear-gradient(
+    to right,
+    var(--orange-div-color-1),
+    var(--orange-div-color-2)
+  );
+  -webkit-box-shadow: -3px 8px 20px -6px var(--orange-div-border);
+  -moz-box-shadow: -3px 8px 20px -6px var(--orange-div-border);
+  box-shadow: -3px 8px 20px -6px var(--orange-div-border);
 
-  color: white;
+  color: var(--text-color);
   border-radius: 10px;
   font-size: 27px;
 
@@ -115,8 +188,12 @@ html {
   display: flex;
   align-items: center;
 
-  background-image: linear-gradient(to right, #00d0ff, #0074ff);
-  color: white;
+  background-image: linear-gradient(
+    to right,
+    var(--primary-button-color-1),
+    var(--primary-button-color-2)
+  );
+  color: var(--text-color);
 
   outline: none;
   border: none;
@@ -141,7 +218,11 @@ html {
 
 /* Text Styles */
 purple-text {
-  background-image: linear-gradient(to right, #8a02f5, #e51aff);
+  background-image: linear-gradient(
+    to right,
+    var(--important-div-color-1),
+    var(--important-div-color-2)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -163,10 +244,14 @@ purple-text {
   bottom: 0;
   width: 100%;
 
-  background: #1e2240;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: linear-gradient(
+    to right bottom,
+    var(--footer-background-1),
+    var(--footer-background-2)
+  );
+  box-shadow: 0 8px 32px 0 var(--shadow);
   backdrop-filter: blur(4px);
-  color: white;
+  color: var(--text-color);
 
   display: flex;
   flex-direction: row;
@@ -200,13 +285,17 @@ purple-text {
   margin-bottom: 5px;
   padding: 0px;
 
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   transition: 0.25s;
 }
 
 .credits:hover {
-  background-image: linear-gradient(to right, #8a02f5, #e51aff);
+  background-image: linear-gradient(
+    to right,
+    var(--important-div-color-1),
+    var(--important-div-color-2)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -236,10 +325,10 @@ purple-text {
 
 /* Header */
 .header {
-  -moz-box-shadow: 6px 6px 6px -6px black;
-  -webkit-box-shadow: 6px 6px 6px -6px black;
-  box-shadow: 6px 6px 6px -6px black;
-  color: white;
+  -moz-box-shadow: 6px 6px 6px -6px var(--shadow);
+  -webkit-box-shadow: 6px 6px 6px -6px var(--shadow);
+  box-shadow: 6px 6px 6px -6px var(--shadow);
+  color: var(--text-color);
 
   display: flex;
   padding-top: 10px;
@@ -280,7 +369,7 @@ purple-text {
   align-items: center;
 
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 
   margin-left: 10px;
 }
@@ -294,14 +383,18 @@ purple-text {
 
 .menubar-holder .header-link {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 
   margin-left: 20px;
   transition: 0.25s;
 }
 
 .menubar-holder .header-link:hover {
-  background-image: linear-gradient(to right, #8a02f5, #e51aff);
+  background-image: linear-gradient(
+    to right,
+    var(--important-div-color-1),
+    var(--important-div-color-2)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -337,49 +430,40 @@ purple-text {
 
 /* Light Mode */
 @media (prefers-color-scheme: light) {
-  body {
-    background: white;
-    color: black;
-  }
+  :root {
+    --background-color-1: white;
+    --background-color-2: white;
+    --background-color-3: white;
+    --scrollbar-backgroundcolor: white;
+    --scrollbar-color-0: #cfcfcf;
+    --scrollbar-color-1: #dde2f8;
+    --scrollbar-color-2: #cfcfcf;
+    --scrollbar-color-hover-1: #6f00c5;
+    --scrollbar-color-hover-2: #b213c7;
 
-  .app-title {
-    background: linear-gradient(to right, #ff96b7, #ffb580);
-    color: black;
-  }
+    --text-color: black;
+    --shadow: black;
 
-  .bordered-div {
-    background: linear-gradient(to right bottom, #dde2f8, #cfcfcf);
-    -webkit-box-shadow: -3px 8px 20px 1px #cfcfcf;
-    -moz-box-shadow: -3px 8px 20px 1px #cfcfcf;
-    box-shadow: -3px 8px 20px 1px #cfcfcf;
+    --bordered-div-color-border: #cfcfcf;
+    --bordered-div-color-1: #dde2f8;
+    --bordered-div-color-2: #cfcfcf;
 
-    border-style: hidden;
-    color: black;
-  }
+    --important-div-color-border: #b107fc;
+    --important-div-color-1: #d196ff;
+    --important-div-color-2: #9d40a9;
 
-  .menubar-holder .header-link,
-  .menubar-holder .softwaress-logo-holder p {
-    color: black;
-  }
+    --purple-div-background: #999;
+    --purple-div-background2: #636363;
+    --purple-div-border: #1f26875e;
 
-  .bordered-div-purple {
-    background: linear-gradient(to right bottom, #999, #636363);
-    color: black;
-  }
+    --orange-div-border: #f47e77;
+    --orange-div-color-1: #ff96b7;
+    --orange-div-color-2: #ffb580;
 
-  .important-bordered-div {
-    background: linear-gradient(to right bottom, #d196ff, #9d40a9);
-    color: black;
-  }
+    --primary-button-color-1: #00d0ff;
+    --primary-button-color-2: #0074ff;
 
-  .bordered-div-orange {
-    background: linear-gradient(to right, #ff96b7, #ffb580);
-    color: black;
-  }
-
-  .footer {
-    background: linear-gradient(to right bottom, #dde2f8, #cfcfcf);
-    color: black;
-    box-shadow: 0 8px 32px 0 #cfcfcf;
+    --footer-background-1: #dde2f8;
+    --footer-background-2: #cfcfcf;
   }
 }
